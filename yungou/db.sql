@@ -50,7 +50,7 @@ CREATE TABLE `go_chou_jiang` (
     `maxqishu` int(10) unsigned NOT NULL COMMENT '最大抽奖期数',
     `zongrenshu`  int(10) unsigned NOT NULL DEFAULT '0' COMMENT '总需投注人数',
     `canyurenshu`  int(10) unsigned NOT NULL DEFAULT '0' COMMENT '已参与人数',
-    `shenyurenshu`  int(10) unsigned NOT NULL DEFAULT '0' COMMENT '已参与人数',
+    `shenyurenshu`  int(10) unsigned NOT NULL DEFAULT '0' COMMENT '剩余与人数',
     `jx_status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '揭晓状态,0未揭晓，1揭晓中，2已揭晓',
     `zhongjiama`  varchar(256) NOT NULL DEFAULT '' COMMENT '中奖的云购码',
     `jx_time` int(10) unsigned NOT NULL COMMENT '揭晓时间',
@@ -92,7 +92,8 @@ CREATE TABLE `go_tou_zhu` (
   `touzhurenci` int(10) unsigned NOT NULL COMMENT '投注人次数',
   `is_zhong` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否中奖', 
   `amount` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '投注金额',
-  `addtime` decimal(10,3) unsigned NOT NULL COMMENT '投注时间,三位小数为毫秒数',
+  `add_timestmap` tinyint(10) unsigned NOT NULL COMMENT '投注时间戳,整数',
+  `add_microtime` tinyint(10) unsigned NOT NULL COMMENT '投注时间毫秒数,后三位小数',
   
    PRIMARY KEY (`tz_id`),
    KEY `cj_id` (`cj_id`),
