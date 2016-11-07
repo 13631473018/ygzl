@@ -105,10 +105,10 @@ CREATE TABLE `go_tou_zhu` (
 CREATE TABLE `go_yungouma_1` (
 
   `id` int(10)  unsigned NOT NULL AUTO_INCREMENT,
-  `cj_id` int(10)  unsigned NOT NULL COMMENT '抽奖id，关联go_chou_jiang表',
-  `order_id` int(10)  unsigned NOT NULL COMMENT '订单表id，关联go_order表',
-  `tz_id` int(10)  unsigned NOT NULL COMMENT '投注id，关联go_tou_zhu表',
-  `uid` int(10) unsigned NOT NULL COMMENT '用户id，关联go_user表',
+  `cj_id` int(10)  unsigned NOT NULL  COMMENT '抽奖id，关联go_chou_jiang表',
+  `order_id` int(10)  unsigned NOT NULL DEFAULT '0' COMMENT '订单表id，关联go_order表',
+  `tz_id` int(10)  unsigned NOT NULL DEFAULT '0' COMMENT '投注id，关联go_tou_zhu表',
+  `uid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '用户id，关联go_user表',
   `yungouma` varchar(256) NOT NULL DEFAULT '' COMMENT '获得的云购码',
 
   PRIMARY KEY (`id`),
