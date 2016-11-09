@@ -118,7 +118,7 @@ CREATE TABLE `go_yungouma_1` (
   KEY `order_id` (`order_id`),
   KEY `uid` (`uid`)
 
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='云购码表1,每个码一条记录(总需投注人数有多少个就有多少条)';
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='云购码表1,每个码一条记录(总需投注人数有多少个就有多少条),原始数10000001';
 
 
 CREATE TABLE `go_zhongjia` (
@@ -149,7 +149,6 @@ CREATE TABLE `go_pay_log` (
 
     PRIMARY KEY (`id`),
     UNIQUE `order_sn` (`order_sn`),
-   
     KEY `uid` (`uid`)
 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='成功支付log';

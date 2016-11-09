@@ -1,0 +1,5 @@
+BAIDU_SSP_define({"queryid" : "a592280601719dce","tuid" : "u2801501_0","placement" : {"basic" : {"cname":"06045029_10_cpr","conBackEnv":1,"flowType":2,"mediumType":1,"rspFormat":1,"sellType":2,"sspId":1,"tuId":9223372032562610013,"userId":6259583}
+,"container" : {"anchoredType":1,"floated":{},"height":125,"sizeType":2,"slide":{},"width":125}
+,"fillstyle" : {"cloudTheme":{},"elements":[5],"lu":{},"search":{},"styleType":3,"txt":{"number":0},"video":{}}
+,"userdefine" : "|at=linkunit|cpro_template=template_inlay_all_mobile_lu_dubao|dbtop=80|lsdpid=1|painter=duBaoMob|ptFS=12|rss1=#FFFFFF|rss2=#000000|tn=template_inlay_all_mobile_lu_dubao","complement_type" : 2,"update" : "1478448939_1478448939"},"extends" : {"ssph":384,"sspw":384}
+,"pdb_deliv" : {"deliv_id" : "0","deliv_des" : {},"brandad" : 0},"order_deliv" : {"deliv_id" : "0","demand_id" : "0"},"rtb_deliv" : {"deliv_id" : "0","demand_id" : "2801501"},"media_protect" : ""});

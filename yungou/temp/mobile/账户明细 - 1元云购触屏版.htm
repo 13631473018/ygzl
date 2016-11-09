@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://m.1yyg.com/member/consumption.do -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	账户明细 - 1元云购触屏版
+</title><meta content="app-id=518966501" name="apple-itunes-app"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><link href="./账户明细 - 1元云购触屏版_files/comm.css" rel="stylesheet" type="text/css"><link href="./账户明细 - 1元云购触屏版_files/member.css" rel="stylesheet" type="text/css"><script src="./账户明细 - 1元云购触屏版_files/jquery190.js" language="javascript" type="text/javascript"></script><script language="javascript" type="text/javascript" src="./账户明细 - 1元云购触屏版_files/consumptionlist.js"></script><script charset="utf-8" async="true" src="./账户明细 - 1元云购触屏版_files/i7.js"></script><script language="javascript" type="text/javascript" src="./账户明细 - 1元云购触屏版_files/Bottom.js"></script><script language="javascript" type="text/javascript" src="./账户明细 - 1元云购触屏版_files/BottomFun.js"></script><script language="javascript" type="text/javascript" src="./账户明细 - 1元云购触屏版_files/Comm.js"></script><script language="javascript" type="text/javascript" src="./账户明细 - 1元云购触屏版_files/CartComm.js"></script><script language="javascript" type="text/javascript" src="./账户明细 - 1元云购触屏版_files/ConsumptionListFun.js"></script><script language="javascript" type="text/javascript" src="./账户明细 - 1元云购触屏版_files/Comm(1).js"></script></head>
+<body style="zoom: 1;">
+<div class="h5-1yyg-v1" id="loadingPicBlock">
+    <input name="loadDataType" type="hidden" id="loadDataType" value="0">
+    
+<!-- 栏目页面顶部 -->
+
+
+<!-- 内页顶部 -->
+
+    <header class="g-header">
+        <div class="head-l">
+	        <a href="javascript:;" onclick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
+        </div>
+        <h2>帐户明细</h2>
+        <div class="fr head-r">
+	        <a href="http://m.1yyg.com/member/index.do" class="z-Member"></a><a id="btnCart" href="http://m.1yyg.com/mycart/index.do" class="z-shop"></a>
+        </div>
+    </header>
+
+    <section class="clearfix g-member">
+	    <article class="clearfix m-round g-userMoney">
+		    <a href="http://m.1yyg.com/member/recharge.do" class="z-Recharge-btn">去充值</a>可用余额<span class="orange">0.00</span>元
+	    </article>
+	    <article class="mt10 m-round">
+		    <ul class="m-userMoneyNav">
+			    <li><a id="btnConsumption" href="javascript:;" class="z-MoneyNav-crt01"><b style="line-height:38px;">消费明细</b></a><s></s></li>
+			    <li><a id="btnRecharge" href="javascript:;" class=""><b style="line-height:38px;">充值明细</b></a></li>
+		    </ul>
+		    
+		    <ul id="ulConsumption" class="m-userMoneylst m-Consumption" style="display: block;"><div class="haveNot z-minheight"><s></s><p>最近三个月无记录</p></div></ul>
+		    <ul id="ulRechage" class="m-userMoneylst" style="display: none;"><div class="haveNot z-minheight"><s></s><p>最近三个月无记录</p></div></ul>
+		    <div id="divLoad" class="loading" style="display: none;"><b></b>正在加载</div>
+		    <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;">点击加载更多</a>
+	    </article>
+    </section>
+    
+<input id="hidIsHttps" type="hidden" value="0">
+<footer id="pageBottom_footer" class="footer">
+    <div class="u-ft-nav" id="fLoginInfo"><span><a href="http://m.1yyg.com/">首页</a><b></b></span><span><a href="http://m.1yyg.com/about2.html">关于我们</a><b></b></span><span><a href="http://m.1yyg.com/member/" class="Member">USER.1016895265</a><a href="https://m.1yyg.com/passport/logout.html" class="Exit">退出</a></span></div>
+    
+        <p class="m-ftA">
+            <a href="http://m.1yyg.com/">触屏版</a><a href="http://www.1yyg.com/?dev=1">电脑版</a><a href="http://app.1yyg.com/down1yygapk.do" target="_blank">下载客户端</a>
+        </p>
+        <p class="grayc">
+            客服热线<span class="orange">4000-588-688</span>粤ICP备09213115号-1
+        </p>
+        <a id="btnTop" href="javascript:;" class="z-top" style="display: none; z-index: 99;">
+            <b class="z-arrow"></b>
+        </a>
+    
+</footer>
+<script language="javascript" type="text/javascript">
+    var Base =
+                {
+                    head: document.getElementsByTagName("head")[0] || document.documentElement,
+                    Myload: function (B, A) {
+                        this.done = false;
+                        B.onload = B.onreadystatechange = function () {
+                            if (!this.done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
+                                this.done = true;
+                                A();
+                                B.onload = B.onreadystatechange = null;
+                                if (this.head && B.parentNode) {
+                                    this.head.removeChild(B);
+                                }
+                            }
+                        };
+                    },
+                    getScript: function (A, C) {
+                        var B = function () { };
+                        if (C != undefined) {
+                            B = C;
+                        }
+                        var D = document.createElement("script");
+                        D.setAttribute("language", "javascript");
+                        D.setAttribute("type", "text/javascript");
+                        D.setAttribute("src", A);
+                        this.head.appendChild(D);
+                        this.Myload(D, B);
+                    },
+                    getStyle: function (A, B) {
+                        var B = function () { };
+                        if (callBack != undefined) {
+                            B = callBack;
+                        }
+                        var C = document.createElement("link");
+                        C.setAttribute("type", "text/css");
+                        C.setAttribute("rel", "stylesheet");
+                        C.setAttribute("href", A);
+                        this.head.appendChild(C);
+                        this.Myload(C, B);
+                    }
+                };
+
+    function GetVerNum() {
+        var D = new Date();
+        return D.getFullYear().toString().substring(2, 4) + '.' + (D.getMonth() + 1) + '.' + D.getDate() + '.' + D.getHours() + '.' + (D.getMinutes() < 10 ? '0' : D.getMinutes().toString().substring(0, 1));
+    }
+
+    Base.getScript(($("#hidIsHttps").val() == "1" ? "https://mskin.1yyg.com" : "http://mskin.1yyg.com")+'/JS/Bottom.js?v=' + GetVerNum());
+
+</script>
+<div style="display: none;">
+    
+    <script type="text/javascript" language="JavaScript" src="./账户明细 - 1元云购触屏版_files/stat.php"></script><script src="./账户明细 - 1元云购触屏版_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=3362429" target="_blank" title="站长统计">站长统计</a>
+</div>
+
+</div>
+
+
+</body></html>

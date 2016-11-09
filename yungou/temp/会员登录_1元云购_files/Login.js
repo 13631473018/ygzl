@@ -1,0 +1,1 @@
+Base.getScript("https://skin.1yyg.com/Passport/JS/LoginFun.js?date=160607");

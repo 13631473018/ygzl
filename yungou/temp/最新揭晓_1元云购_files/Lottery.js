@@ -1,0 +1,1 @@
+Base.getScript("http://skin.1yyg.com/DataServer/JS/LotteryFun.js?date=150803");
