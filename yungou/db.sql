@@ -47,17 +47,18 @@ CREATE TABLE `go_chou_jiang` (
     `cj_id` int(10)  unsigned NOT NULL AUTO_INCREMENT,
     `goods_id` int(10)  unsigned NOT NULL COMMENT '商品id，关联go_goods表',
     `qi_shu` int(10) unsigned NOT NULL COMMENT '当前抽奖期数',
-    `maxqishu` int(10) unsigned NOT NULL COMMENT '最大抽奖期数',
     `zongrenshu`  int(10) unsigned NOT NULL DEFAULT '0' COMMENT '总需投注人数',
     `canyurenshu`  int(10) unsigned NOT NULL DEFAULT '0' COMMENT '已参与人数',
     `shenyurenshu`  int(10) unsigned NOT NULL DEFAULT '0' COMMENT '剩余与人数',
     `jx_status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '揭晓状态,0未揭晓，1揭晓中，2已揭晓',
     `zhongjiama`  varchar(256) NOT NULL DEFAULT '' COMMENT '中奖的云购码',
-    `jx_time` int(10) unsigned NOT NULL COMMENT '揭晓时间',
-    `addtime` int(10) unsigned NOT NULL COMMENT '抽奖开始时间',
+    `jx_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '揭晓时间',
+    `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '抽奖开始时间',
     PRIMARY KEY (`cj_id`),
 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='抽奖表';
+
+
 
 
 CREATE TABLE `go_order` (
@@ -71,7 +72,7 @@ CREATE TABLE `go_order` (
     `amount` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '投注金额',
     `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '订单状态,0待支付，1已支付', 
    
-    `pay_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '支付时间',
+    `pay_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '支付成功时间',
     `pay_method` varchar(16)  NOT NULL DEFAULT '' COMMENT '支付方式',
     PRIMARY KEY (`order_id`),
     UNIQUE `order_sn` (`order_sn`),
