@@ -90,7 +90,7 @@ CREATE TABLE `go_tou_zhu` (
   `uid` int(10) unsigned NOT NULL COMMENT '用户id，关联go_user表',
   `yungouma_table` varchar(64) NOT NULL DEFAULT '' COMMENT '云购码表名,table_1',   
   `yungouma` varchar(256) NOT NULL DEFAULT '' COMMENT '获得的云购码(序列化)',   
-  `touzhurenci` int(10) unsigned NOT NULL COMMENT '投注人次数',
+  `touzhurenci` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '投注人次数',
   `is_zhong` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否中奖', 
   `amount` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '投注金额',
   `add_timestmap` tinyint(10) unsigned NOT NULL COMMENT '投注时间戳,整数',
@@ -107,11 +107,11 @@ CREATE TABLE `go_tou_zhu` (
 CREATE TABLE `go_yungouma_1` (
 
   `id` int(10)  unsigned NOT NULL AUTO_INCREMENT,
+  `tz_id` int(10)  unsigned NOT NULL DEFAULT '0' COMMENT '投注id，关联go_tou_zhu表',
   `cj_id` int(10)  unsigned NOT NULL  COMMENT '抽奖id，关联go_chou_jiang表',
   `order_id` int(10)  unsigned NOT NULL DEFAULT '0' COMMENT '订单表id，关联go_order表',
-  `tz_id` int(10)  unsigned NOT NULL DEFAULT '0' COMMENT '投注id，关联go_tou_zhu表',
   `uid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '用户id，关联go_user表',
-  `yungouma` varchar(256) NOT NULL DEFAULT '' COMMENT '获得的云购码',
+  `yungouma` int(10) unsigned NOT NULL COMMENT '获得的云购码',
 
   PRIMARY KEY (`id`),
   KEY `cj_id` (`cj_id`),
